@@ -94,4 +94,26 @@ Remember to set this up appropriately so that your .git directory is not publicl
   * python __init__.py
   * deactivate
 
+* Configure New virtual host
+ * Now create and enable new virtual host
+ * Creating host config file sudo nano /etc/apache2/sites-available/catalog.conf
+ * Paste the following in that:
+  *`<VirtualHost *:80>
+  ServerName 34.201.114.178
+  ServerAdmin admin@34.201.114.178
+  WSGIScriptAlias / /var/www/catalog/catalog.wsgi
+  <Directory /var/www/catalog/catalog/>
+      Order allow,deny
+      Allow from all
+  </Directory>
+  Alias /static /var/www/catalog/catalog/static
+  <Directory /var/www/catalog/catalog/static/>
+      Order allow,deny
+      Allow from all
+  </Directory>
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+  LogLevel warn
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>`
+
   
