@@ -95,9 +95,9 @@ Remember to set this up appropriately so that your .git directory is not publicl
   * deactivate
 
 * Configure New virtual host
- * Now create and enable new virtual host
- * Creating host config file sudo nano /etc/apache2/sites-available/catalog.conf
- * Paste the following in that:
+  * Now create and enable new virtual host
+  * Creating host config file sudo nano /etc/apache2/sites-available/catalog.conf
+  * Paste the following in that:
    ```
     <VirtualHost *:80>
       ServerName 34.201.114.178
@@ -118,4 +118,34 @@ Remember to set this up appropriately so that your .git directory is not publicl
   </VirtualHost>
 ```
 
-  
+* Clone Github Item catalog app
+  * sudo git clone https://github.com/sid2111995/item-catalog
+  * shopt -s dotglob to view hidden files . Move files from clone directory to catalog 
+  * remove cloned directory sudo rm -r devpost
+ 
+* make .git inaccessible
+  * from cd /var/www/catalog/ create .htaccess file sudo nano .htaccess
+  * paste in RedirectMatch 404 /\.git
+  * save file(nano: ctrl+x, Y, Enter)
+  * for dependencies:
+    * source venv/bin/activate
+    * pip install httplib2
+    * pip install requests
+    * sudo pip install --upgrade oauth2client
+    * sudo pip install sqlalchemy
+    * pip install Flask-SQLAlchemy
+    * sudo pip install python-psycopg2
+    * in case of any other packages install them
+    
+* Install and configure Postgresql
+  * install by typing sudo apt-get install postgresql
+  * sudo apt-get install postgresql-contrib
+  * config database_setup.py sudo nano database_setup.py
+  * python engine = create_engine('postgresql://catalog:12345@localhost/catalog')
+  * repeat for project.py
+  * copy your main project.py file into the init.py file mv project.py __init__.py
+  * sudo adduser catalog to add a catalog user
+  * login as postgres super usersudo su - postgres
+  * psql to enter into postgres
+ 
+
