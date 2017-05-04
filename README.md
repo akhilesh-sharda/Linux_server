@@ -1,6 +1,8 @@
 # Linux_server
 
 * Amazon Lightsail terminal:
+  * First, log in to Lightsail. If you don't already have an Amazon Web Services account, you'll be prompted to create one.
+  * Once you're logged in, Lightsail will give you a friendly message with a robot on it, prompting you to create an instance. A      Lightsail instance is a Linux server running on a virtual machine inside an Amazon datacenter. 
   * Signup for Amazon Lightsail.
   * Launch Ubuntu terminal.
   
