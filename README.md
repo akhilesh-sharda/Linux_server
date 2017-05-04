@@ -182,7 +182,7 @@ Remember to set this up appropriately so that your .git directory is not publicl
 * OAuth :
   * go to http://www.hcidata.info/host2ip.cgi to get your host name as google dont allow to make redirects.
   * In apache config file type the following: sudo nano /etc/apache2/sites-available/catalog.conf
-  * <ServerAlias YOURHOSTNAME> add this below ServerAdmin
+  * ServerAlias YOURHOSTNAME add this below ServerAdmin
   * Enable  Virtual box and restart server: sudo a2ensite catalog, sudo service apache2 catalog
   * add your host name and IP address to Authorized Javascript origins also add HostName/ouath2callbac to authourised URL.
  
