@@ -1,8 +1,9 @@
 # Linux_server
 
-IP address: 34.205.54.249
-All passwords: 12345
-Project Link: ec2-34-205-54-249.compute-1.amazonaws.com
+* IP address: 34.205.54.249
+* SSH PORT: 2200
+* All passwords: 12345
+* Project Link: ec2-34-205-54-249.compute-1.amazonaws.com
 
 * Amazon Lightsail terminal:
   * First, log in to Lightsail. If you don't already have an Amazon Web Services account, you'll be prompted to create one.
@@ -123,6 +124,23 @@ Remember to set this up appropriately so that your .git directory is not publicl
       CustomLog ${APACHE_LOG_DIR}/access.log combined
   </VirtualHost>`
 ```
+* Create the wsgi file
+  * cd /var/www/catalog
+  * sudo nano catalog.wsgi
+
+    ```
+  #!/usr/bin/python
+  import sys
+  import logging
+  logging.basicConfig(stream=sys.stderr)
+  sys.path.insert(0,"/var/www/catalog/")
+
+  from catalog import app as application
+  application.secret_key = 'Add your secret key'
+  ```
+
+  * save file and `sudo service apache2 restart` to restart
+
 
 * Clone Github Item catalog app
   * sudo git clone https://github.com/sid2111995/item-catalog
