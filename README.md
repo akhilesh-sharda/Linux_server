@@ -84,7 +84,7 @@ Remember to set this up appropriately so that your .git directory is not publicl
     if __name__ == "__main__":
     app.run()`
     
-* Install flask
+* flask:
   * sudo apt-get install python-pip
   * sudo pip install virtualenv
   * sudo virtualenv venv
@@ -146,6 +146,20 @@ Remember to set this up appropriately so that your .git directory is not publicl
   * copy your main project.py file into the init.py file mv project.py __init__.py
   * sudo adduser catalog to add a catalog user
   * login as postgres super usersudo su - postgres
-  * psql to enter into postgres
+  * psql to enter into postgres.
+  * type command: create user catalog with password '12345';
+  * change role by typing: ALTER USER catalog CREATEDB;
+  * CREATE DATABASE catalog WITH OWNER catalog;  type this to create a new DB catalog.
+  * \c catalog to connect.
+  * for revoking all the rights : REVOKE ALL ON SCHEMA PUBLIC FROM PUBLIC; and the GRANT ALL SCHEMA PUBLIC TO CATALOG;
+  * Logout 
+  * Run python database_setup.py
+  
+* OAuth :
+  * go to http://www.hcidata.info/host2ip.cgi to get your host name as google dont allow to make redirects.
+  * In apache config file type the following: sudo nano /etc/apache2/sites-available/catalog.conf
+  * <ServerAlias YOURHOSTNAME> add this below ServerAdmin
+  * Enable  Virtual box and restart server: sudo a2ensite catalog, sudo service apache2 catalog
+  * add your host name and IP address to Authorized Javascript origins also add HostName/ouath2callbac to authourised URL.
  
 
