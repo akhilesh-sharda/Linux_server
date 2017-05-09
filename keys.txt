@@ -1,12 +1,3 @@
-public-key:
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDi/LCDBGrEHU3YcUndUoYZ4umri
-kbNmE9wiQAp3gI7l077A3RJCpzrUF2mS/AFPTn0OjCqYKafjJzbPyRW/cul8ob3Cw
-Dhrx9y0iHWbfqEnnxaDoMcEr/plg1+DpPHopKM2zQKBbilxF5OdZ6KUmLTrMgUT6w
-Z4FvdMmN9wcPQV5ArxS3rjt6vPynFsnEjfhpY5q7EYRvEWDfAdepLddB2kCbntkR5
-n4iBcULqCgmKvvz46Qo8haTau1Isgo4IJh3uFhTptwK5xSUHkEjhlASQTIHsVYA17
-sBwzjBWSBz9ak5H3MFKobdrOLP927W+v9OSRKJVhS2XTEgiV9UlpguF ubuntu@ip
--172-26-2-174
-
 private-key:
 
 -----BEGIN RSA PRIVATE KEY-----
